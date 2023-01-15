@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 // esta línea se agrega automáticamente cuando creas el componente usando la línea de comnados, al igual que la línea de ProductAlertsComponent en las declaraciones de más abajo
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
@@ -16,13 +17,15 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductAlertsComponent
+    ProductAlertsComponent,
+    ProductDetailsComponent
   ],
   bootstrap: [
     AppComponent
